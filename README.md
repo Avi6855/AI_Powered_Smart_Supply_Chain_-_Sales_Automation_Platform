@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Platform Banner](docs/screenshots/dashboard.png)
+![Platform Banner](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Platform%20Banner.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
