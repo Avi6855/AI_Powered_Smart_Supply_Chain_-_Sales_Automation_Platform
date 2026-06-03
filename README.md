@@ -232,7 +232,7 @@ This platform consolidates all supply chain and sales workflows into a single, c
 
 ## Demo
 
-> 🎬 [Watch Demo Video](https://YOUR_DEMO_VIDEO_URL_HERE)
+> 🎬 [Watch Demo Video](https://drive.google.com/drive/folders/1QDxsgCullo4JfTZ1UUlYxrmA36kTB0v_)
 
 ---
 
