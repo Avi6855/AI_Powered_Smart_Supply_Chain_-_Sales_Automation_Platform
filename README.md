@@ -248,7 +248,7 @@ Ensure the following are installed on your machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone 
+git clone https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform.git
 cd AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform
 ```
 
