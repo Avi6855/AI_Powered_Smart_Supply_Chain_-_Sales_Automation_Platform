@@ -203,10 +203,11 @@ This platform consolidates all supply chain and sales workflows into a single, c
 ## Screenshots
 
 ### Executive Dashboard
-![Dashboard](docs/screenshots/dashboard.png)
+![Dashboard](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Dashboard.png)
 
 ### Inventory Management
-![Inventory](docs/screenshots/inventory.png)
+![Inventory](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Inventory.png)
+![Inventory AI](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Inventory%20AI.png)
 
 ### Order Management
 ![Orders](docs/screenshots/orders.png)
