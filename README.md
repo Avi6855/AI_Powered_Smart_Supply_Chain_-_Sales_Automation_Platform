@@ -498,7 +498,7 @@ The platform is architected to scale horizontally:
 **Avinash Patil**
 
 - GitHub: [@Avi6855](https://github.com/Avi6855)
-- LinkedIn: [PLACEHOLDER_LINKEDIN_URL]
+- LinkedIn: [https://www.linkedin.com/in/avinash-patil-278011228/]
 
 ---
 
