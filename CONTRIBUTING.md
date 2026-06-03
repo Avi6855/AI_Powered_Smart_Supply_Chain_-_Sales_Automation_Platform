@@ -35,8 +35,8 @@ By participating in this project, you agree to maintain a respectful and constru
 ### 1. Fork & Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Powered-Supply-Chain-Sales-Automation.git
-cd AI-Powered-Supply-Chain-Sales-Automation
+git clone https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform.git
+cd AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform
 ```
 
 ### 2. Create a Feature Branch
