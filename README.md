@@ -210,19 +210,23 @@ This platform consolidates all supply chain and sales workflows into a single, c
 ![Inventory AI](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Inventory%20AI.png)
 
 ### Order Management
-![Orders](docs/screenshots/orders.png)
+![Orders](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Orders.png)
+![Orders AI](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Orders%20AI.png)
 
 ### Procurement Module
-![Procurement](docs/screenshots/procurement.png)
+![Procurement](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Procurement.png)
+![Procurement AI](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Procurement%20AI.png)
 
 ### Shipment Tracking
-![Shipments](docs/screenshots/shipments.png)
+![Shipments](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Shipments.png)
+![Shipments AI](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Shipments%20AI.png)
 
 ### Supplier Management
-![Suppliers](docs/screenshots/suppliers.png)
+![Suppliers](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Suppliers.png)
+![Suppliers AI](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/Suppliers%20AI.png)
 
 ### AI Assistant
-![AI Assistant](docs/screenshots/ai-assistant.png)
+![AI Assistant](https://github.com/Avi6855/AI_Powered_Smart_Supply_Chain_-_Sales_Automation_Platform/blob/main/docs/screenshots/AI%20Assistant.png)
 
 ---
 
