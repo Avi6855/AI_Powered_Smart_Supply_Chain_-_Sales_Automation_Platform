@@ -1,0 +1,211 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  application:
+    name: supply-chain-platform
+
+  # ─────────────────────────────────────────
+  # Database (PostgreSQL)
+  # ─────────────────────────────────────────
+  datasource:
+    url: jdbc:postgresql://localhost:5432/supply_chain_db
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:root}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      pool-name: SupplyChainPool
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1200000
+      auto-commit: false
+
+  # ─────────────────────────────────────────
+  # JPA / Hibernate
+  # ─────────────────────────────────────────
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        jdbc:
+          batch_size: 25
+        order_inserts: true
+        order_updates: true
+
+  # ─────────────────────────────────────────
+  # Flyway Migrations
+  # ─────────────────────────────────────────
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    baseline-version: 0
+    validate-on-migrate: true
+    out-of-order: false
+
+  # ─────────────────────────────────────────
+  # Redis Cache
+  # ─────────────────────────────────────────
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:Avi6855#}
+      timeout: 2000ms
+      lettuce:
+        pool:
+          max-active: 16
+          max-idle: 8
+          min-idle: 2
+
+  cache:
+    type: redis
+    redis:
+      time-to-live: 600000
+      cache-null-values: false
+
+  # ─────────────────────────────────────────
+  # Mail / SMTP
+  # ─────────────────────────────────────────
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: 587
+    username: ${MAIL_USERNAME:avinashpatil6855@gmail.com}
+    password: ${MAIL_PASSWORD:ljrg hvif iudn qdvv}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+  # ─────────────────────────────────────────
+  # Jackson
+  # ─────────────────────────────────────────
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      fail-on-empty-beans: false
+    deserialization:
+      fail-on-unknown-properties: false
+    default-property-inclusion: NON_NULL
+    time-zone: UTC
+
+  # ─────────────────────────────────────────
+  # Async / Thread pool
+  # ─────────────────────────────────────────
+  task:
+    execution:
+      pool:
+        core-size: 10
+        max-size: 50
+        queue-capacity: 100
+    scheduling:
+      pool:
+        size: 5
+
+# ─────────────────────────────────────────────
+# JWT Configuration
+# ─────────────────────────────────────────────
+jwt:
+  secret: ${JWT_SECRET:VGhpc0lzQVN1cGVyU2VjdXJlSFM1MTJKV1RTZWNyZXRLZXlGb3JTcHJpbmdCb290M0FuZEphdmEyMUFwcGxpY2F0aW9uQW5kSXROZWVkc1RvQmVBeExlYXN0NjRCeXRlc01vcmVGb3I2NEJ5dGVzCg==}
+  expiration: 86400000        # 24 hours in ms
+  refresh-expiration: 604800000 # 7 days in ms
+
+# ─────────────────────────────────────────────
+# OpenRouter AI Configuration
+# ─────────────────────────────────────────────
+openrouter:
+  primary-api-key: ${OPENROUTER_PRIMARY_API_KEY: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}
+  secondary-api-key: ${OPENROUTER_SECONDARY_API_KEY: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}
+  base-url: https://openrouter.ai/api/v1
+  primary-model: openai/gpt-oss-120b:free
+  secondary-model: deepseek/deepseek-chat-v4:free
+  timeout: 120
+  max-tokens: 4096
+  temperature: 0.7
+
+# ─────────────────────────────────────────────
+# SpringDoc / Swagger
+# ─────────────────────────────────────────────
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+    tagsSorter: alpha
+    try-it-out-enabled: true
+    filter: true
+  show-actuator: true
+  packages-to-scan: com.supplychain
+
+# ─────────────────────────────────────────────
+# Actuator
+# ─────────────────────────────────────────────
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+  info:
+    env:
+      enabled: true
+
+# ─────────────────────────────────────────────
+# Logging
+# ─────────────────────────────────────────────
+logging:
+  level:
+    com.supplychain: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.flywaydb: INFO
+  file:
+    name: logs/application.log
+  logback:
+    rollingpolicy:
+      max-file-size: 50MB
+      max-history: 30
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+# ─────────────────────────────────────────────
+# Application Custom Properties
+# ─────────────────────────────────────────────
+app:
+  cors:
+    allowed-origins: ${CORS_ORIGINS:http://localhost:3000,http://localhost:5173}
+  file:
+    upload-dir: ${FILE_UPLOAD_DIR:uploads}
+    max-size: 10MB
+  scheduler:
+    analytics-snapshot-cron: "0 0 1 * * ?"     # 01:00 AM daily
+    reorder-check-cron: "0 0 */4 * * ?"        # Every 4 hours
+    notification-cleanup-cron: "0 0 2 * * ?"   # 02:00 AM daily
